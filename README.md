@@ -17,7 +17,6 @@ The application follows a client-server architecture where the React frontend co
 - [Database Configuration](#-database-configuration)
 - [Application Flow](#-application-flow)
 - [Future Enhancements](#-future-enhancements)
-- [Author](#-author)
 
   ---
 
