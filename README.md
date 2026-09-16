@@ -93,7 +93,7 @@ The backend exposes RESTful APIs using Spring Boot, while the frontend provides 
 | React.js | Frontend Library |
 | JavaScript (ES6+) | Programming Language |
 | React Router | Client-side Routing |
-| Axios ||
+| Axios | HTTP Client |
 | Bootstrap | Responsive UI |
 | Vite | Frontend Build Tool |
 | HTML5 | Structure |
@@ -211,7 +211,7 @@ npm
 Git
 🔧 Backend Setup
 1. Clone the Repository
-git clone https://github.com/YOUR-USERNAME/EmpTrack.git
+git clone https://github.com/Sumanjali-93/EmpTrack.git
 
 Navigate to the project:
 
