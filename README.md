@@ -138,103 +138,307 @@ EmpTrack/
 └── README.md
 ```
 
-🔗 REST API Endpoints
-Base URL:
-    http://localhost:8080/api/employees
- Method	Endpoint	Description
-GET	/api/employees	Get all employees
-GET	/api/employees/{id}	Get employee by ID
-POST	/api/employees	Create a new employee
-PUT	/api/employees/{id}	Update an employee
-DELETE	/api/employees/{id}	Delete an employee
+## 🔗 REST API Endpoints
 
+**Base URL:** `http://localhost:8080/api/employees`
 
-⚙️ Getting Started
+| Method | Endpoint              | Description           |
+| ------ | --------------------- | --------------------- |
+| GET    | `/api/employees`      | Get all employees     |
+| GET    | `/api/employees/{id}` | Get employee by ID    |
+| POST   | `/api/employees`      | Create a new employee |
+| PUT    | `/api/employees/{id}` | Update an employee    |
+| DELETE | `/api/employees/{id}` | Delete an employee    |
+
+---
+
+## ⚙️ Getting Started
 
 Follow these steps to run EmpTrack locally.
 
-Prerequisites
+### Prerequisites
 
 Make sure the following are installed:
 
-Java 17 or later
-Maven
-MySQL
-Node.js
-npm
-Git
+* Java 17 or later
+* Maven
+* MySQL
+* Node.js
+* npm
+* Git
 
-🔧 Backend Setup
-Clone the Repository
+### 🔧 Backend Setup
+
+#### 1. Clone the Repository
+
+```bash
 git clone https://github.com/YOUR-USERNAME/EmpTrack.git
-Navigate to the project:
 cd EmpTrack
-Navigate to Backend
+```
+
+#### 2. Navigate to the Backend
+
+```bash
 cd backend
-Configure MySQL
+```
+
+#### 3. Configure MySQL
+
+Create the database:
+
+```sql
 CREATE DATABASE ems;
-Configure your database credentials in: backend/src/main/resources/application.properties
+```
+
+Configure your database credentials in:
+
+```text
+backend/src/main/resources/application.properties
+```
+
 Example:
+
+```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/ems
 spring.datasource.username=YOUR_USERNAME
 spring.datasource.password=YOUR_PASSWORD
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+```
 
-Run the Backend
+> **Note:** Do not commit your actual MySQL username and password to GitHub.
+
+#### 4. Run the Backend
+
+```bash
 mvn spring-boot:run
+```
 
-The backend will run on: http://localhost:8080
+The backend will run at:
 
-💻 Frontend Setup
+`http://localhost:8080`
+
+---
+
+### 💻 Frontend Setup
+
+Open a new terminal and navigate to the frontend:
+
+```bash
 cd frontend
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
+
+Run the frontend:
+
+```bash
 npm run dev
-The frontend will be available at: http://localhost:3000
+```
 
+The frontend will be available at:
 
+`http://localhost:3000`
 
-🗄️ Database Configuration
-EmpTrack uses MySQL as the relational database.
+---
+
+## 🗄️ Database Configuration
+
+EmpTrack uses **MySQL** as the relational database.
 
 The backend uses:
 
+```text
 Spring Data JPA
-        ↓
-     Hibernate
-        ↓
-       MySQL
+       ↓
+   Hibernate
+       ↓
+     MySQL
+```
 
+---
 
+## 🔄 Application Flow
 
+```text
+React Frontend
+      │
+      │ Axios HTTP Requests
+      ▼
+Spring Boot REST API
+      │
+      ▼
+  Service Layer
+      │
+      ▼
+ Repository Layer
+      │
+      │ JPA / Hibernate
+      ▼
+     MySQL
+```
 
-🔄 Application Flow
- React Frontend
-              │
-              │ Axios HTTP Requests
-              ▼
-       Spring Boot REST API
-              │
-              │ Service Layer
-              ▼
-        Repository Layer
-              │
-              │ JPA / Hibernate
-              ▼
-            MySQL
+---
 
+## 🔗 REST API Endpoints
 
+**Base URL:** `http://localhost:8080/api/employees`
 
+| Method | Endpoint              | Description           |
+| ------ | --------------------- | --------------------- |
+| GET    | `/api/employees`      | Get all employees     |
+| GET    | `/api/employees/{id}` | Get employee by ID    |
+| POST   | `/api/employees`      | Create a new employee |
+| PUT    | `/api/employees/{id}` | Update an employee    |
+| DELETE | `/api/employees/{id}` | Delete an employee    |
 
-🧭 Frontend Routes
-Route	Description
-/	Employee List
-/employees	Employee List
-/add-employee	Add Employee
-/edit-employee/:id	Edit Employee
+---
 
+## ⚙️ Getting Started
 
+Follow these steps to run EmpTrack locally.
+
+### Prerequisites
+
+Make sure the following are installed:
+
+* Java 17 or later
+* Maven
+* MySQL
+* Node.js
+* npm
+* Git
+
+### 🔧 Backend Setup
+
+#### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/EmpTrack.git
+cd EmpTrack
+```
+
+#### 2. Navigate to the Backend
+
+```bash
+cd backend
+```
+
+#### 3. Configure MySQL
+
+Create the database:
+
+```sql
+CREATE DATABASE ems;
+```
+
+Configure your database credentials in:
+
+```text
+backend/src/main/resources/application.properties
+```
+
+Example:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/ems
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSWORD
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+
+> **Note:** Do not commit your actual MySQL username and password to GitHub.
+
+#### 4. Run the Backend
+
+```bash
+mvn spring-boot:run
+```
+
+The backend will run at:
+
+`http://localhost:8080`
+
+---
+
+### 💻 Frontend Setup
+
+Open a new terminal and navigate to the frontend:
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the frontend:
+
+```bash
+npm run dev
+```
+
+The frontend will be available at:
+
+`http://localhost:3000`
+
+---
+
+## 🗄️ Database Configuration
+
+EmpTrack uses **MySQL** as the relational database.
+
+The backend uses:
+
+```text
+Spring Data JPA
+       ↓
+   Hibernate
+       ↓
+     MySQL
+```
+
+---
+
+## 🔄 Application Flow
+
+```text
+React Frontend
+      │
+      │ Axios HTTP Requests
+      ▼
+Spring Boot REST API
+      │
+      ▼
+  Service Layer
+      │
+      ▼
+ Repository Layer
+      │
+      │ JPA / Hibernate
+      ▼
+     MySQL
+```
+
+---
+
+## 🧭 Frontend Routes
+
+| Route                | Description   |
+| -------------------- | ------------- |
+| `/employees`         | Employee List |
+| `/add-employee`      | Add Employee  |
+| `/edit-employee/:id` | Edit Employee |
 
 
 
