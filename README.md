@@ -104,6 +104,8 @@ The backend exposes RESTful APIs using Spring Boot, while the frontend provides 
 
 ```text
 
+
+
 EmpTrack/
 │
 ├── backend/
@@ -139,6 +141,7 @@ EmpTrack/
 ├── .gitignore
 └── README.md
 🔗 REST API Endpoints
+
 
 Base URL:
 
@@ -194,7 +197,7 @@ DELETE /api/employees/1
 Response:
 
 Employee deleted successfully
-⚙️ Getting Started
+## ⚙️ Getting Started
 
 Follow these steps to run EmpTrack locally.
 
